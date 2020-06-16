@@ -10,6 +10,6 @@ docker push antrancs/multi-server:$SHA
 docker push antrancs/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=antrancs/multi-server:$SHA
+kubectl set image deployments/server-deployment api=antrancs/multi-server:$SHA
 kubectl set image deployments/client-deployment client=antrancs/multi-client:$SHA
 kubectl set image deployments/worker-deployment worker=antrancs/multi-worker:$SHA
